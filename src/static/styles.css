@@ -159,12 +159,13 @@ footer {
 
 /* Make the list compact and readable */
 .participants-list {
-  list-style: disc;
+  list-style: none; /* hide default bullets */
   margin: 0;
-  padding-left: 20px;
+  padding-left: 0;
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
+  align-items: center;
 }
 
 /* Each participant shown as a small badge / pill for prettiness */
@@ -184,6 +185,29 @@ footer {
   font-size: 13px;
   line-height: 1;
   box-shadow: 0 1px 0 rgba(0,0,0,0.02);
+}
+
+/* Remove button next to each participant */
+.participant-remove {
+  margin-left: 8px;
+  background: transparent;
+  border: none;
+  color: #c62828;
+  cursor: pointer;
+  padding: 4px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+}
+
+.participant-remove:hover {
+  background: rgba(198,40,40,0.08);
+}
+
+.participant-item {
+  display: inline-flex;
+  align-items: center;
 }
 
 /* Fallback when there are no participants yet */
