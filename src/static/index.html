@@ -19,6 +19,24 @@
           <!-- Activities will be loaded here -->
           <p>Loading activities...</p>
         </div>
+
+        <!-- Template for activity cards (app.js can clone this and fill data) -->
+        <template id="activity-card-template">
+          <article class="activity-card" aria-labelledby="activity-title">
+            <h4 id="activity-title" class="activity-title">Activity Name</h4>
+            <p class="activity-desc">Activity description</p>
+            <p class="activity-schedule"><strong>Schedule:</strong> Time / Days</p>
+
+            <!-- Participants section -->
+            <div class="participants" aria-live="polite">
+              <h5 class="participants-heading">Participants</h5>
+              <ul class="participants-list">
+                <!-- JS should insert <li><span class="participant-pill">email@domain</span></li> -->
+              </ul>
+            </div>
+          </article>
+        </template>
+
       </section>
 
       <section id="signup-container">

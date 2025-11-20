@@ -142,3 +142,79 @@ footer {
   padding: 20px;
   color: #666;
 }
+
+/* Participants section styling */
+.participants {
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px dashed #eee;
+}
+
+.participants-heading {
+  margin: 0 0 8px 0;
+  font-size: 14px;
+  color: #1a237e;
+  font-weight: 600;
+}
+
+/* Make the list compact and readable */
+.participants-list {
+  list-style: none; /* hide default bullets */
+  margin: 0;
+  padding-left: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+
+/* Each participant shown as a small badge / pill for prettiness */
+.participants-list li {
+  list-style: none; /* hide default bullet because we use pills */
+  margin: 0;
+  padding: 0;
+}
+
+.participant-pill {
+  display: inline-block;
+  background: #f1f3ff;
+  color: #1a237e;
+  border: 1px solid #e2e6ff;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 13px;
+  line-height: 1;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.02);
+}
+
+/* Remove button next to each participant */
+.participant-remove {
+  margin-left: 8px;
+  background: transparent;
+  border: none;
+  color: #c62828;
+  cursor: pointer;
+  padding: 4px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+}
+
+.participant-remove:hover {
+  background: rgba(198,40,40,0.08);
+}
+
+.participant-item {
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Fallback when there are no participants yet */
+.participants-list:empty::before {
+  content: "No participants yet. Be the first to sign up!";
+  display: block;
+  color: #666;
+  font-size: 13px;
+  padding: 4px 0;
+}
